@@ -1,0 +1,171 @@
+<context>
+
+# Overview
+
+HealthSync is a fullstack iOS application that enables users to collect Apple Health data from their iPhones and sync selected health metrics to a variety of customizable backend destinations. This solves the common problem biohackers and quantified-self enthusiasts face: data siloing and lack of ownership over personal health metrics.
+
+Users want to visualize, export, and analyze their biometric data outside of Apple's ecosystem—in services like Supabase, Google Sheets, Zapier, or their own APIs. HealthSync makes this possible with zero-code setup and a flexible sync architecture that grows with user needs.
+
+Target users include:
+
+* Biohackers
+* Data science hobbyists
+* Healthcare researchers tracking personal data
+* Anyone wanting full control and ownership of their Apple Health data
+
+# Core Features
+
+### 1. Full Apple HealthKit Data Access
+
+* **What:** Automatically detects and allows access to all HealthKit-supported data types
+* **Why:** Ensures future compatibility and extensibility
+* **How:** Uses HealthKit APIs to fetch readable `HKQuantityTypeIdentifiers`, then standardizes them into a unified model
+
+### 2. Metric Selection UI
+
+* **What:** Users choose which data types they want to sync
+* **Why:** Prevents data overload, improves backend relevance
+* **How:** Data types grouped by category (Vitals, Lab, Activity, etc.) with toggle switches
+
+### 3. Sync Destination Management
+
+* **What:** Users configure multiple output destinations: Supabase, Google Sheets, Zapier, Custom API
+* **Why:** Supports flexibility and user autonomy
+* **How:** Each destination has a dedicated form for credentials and field mapping
+
+### 4. Manual and Auto Sync Engine
+
+* **What:** Syncs selected metrics to selected destinations
+* **Why:** Ensures consistent, real-time data availability
+* **How:** Button-triggered or optionally background-triggered (subject to iOS constraints)
+
+### 5. Logs and Feedback Panel
+
+* **What:** Sync success/failure log viewer
+* **Why:** Debugging, transparency, and trust
+* **How:** Stores and displays past sync status, response codes, and errors
+
+</context>
+
+<PRD>
+
+# Technical Architecture
+
+### System Components
+
+* **HealthKitManager**: Interfaces with Apple HealthKit APIs
+* **SyncEngine**: Routes normalized data to each active sync target
+* **SyncTarget (protocol)**: Abstract interface implemented by each backend client
+* **PersistenceService**: Handles local storage (UserDefaults, Keychain)
+* **ConfigService**: Stores user settings (selected metrics, sync targets)
+* **Logger**: Stores sync logs
+* **SyncTemplateEngine**: Replaces {{placeholders}} in user-defined JSON templates
+
+### Data Models
+
+* `HealthMetric { name, value, unit, timestamp }`
+* `SyncDestination { id, type, config, isEnabled }`
+* `UserSettings { selectedMetrics, syncPreferences }`
+
+### APIs and Integrations
+
+* **Supabase**: REST client using API key and project URL
+* **Google Sheets**: REST v4 API or App Script Webhook
+* **Zapier**: Standard webhook URL
+* **Custom API**: User-defined URL, headers, raw body (templated)
+
+### Infrastructure Requirements
+
+* iOS 16+
+* No backend server needed (pure client-side app)
+* Optional iCloud for config persistence
+
+# Development Roadmap
+
+### MVP Requirements
+
+* HealthKit integration (read all available types)
+* UI for selecting metrics
+* Supabase sync integration (manual only)
+* Google Sheets sync via App Script Webhook
+* Zapier webhook sync
+* Custom API sync
+* Logs panel
+* Config persistence
+
+### Phase 2: Enhancements
+
+* Background fetch support for sync
+* OAuth for Google Sheets
+* CSV export
+* Shortcut/SiriKit integration
+* Graphs and trend visualization
+* Unit normalization and conversion support
+
+# Logical Dependency Chain
+
+1. **Core Setup**
+
+   * HealthKitManager (access + sample queries)
+   * HealthMetric model and normalization layer
+2. **Basic UI**
+
+   * Metric selection screen
+   * Logs screen (static version)
+   * Root tab scaffold
+3. **Manual Sync to Supabase**
+
+   * SyncTarget protocol
+   * SupabaseTarget implementation
+   * SyncEngine with basic routing
+4. **Config Service + Persistence**
+
+   * Selected metric storage
+   * SyncDestination config and persistence
+5. **Other Backends**
+
+   * Google Sheets (webhook)
+   * Zapier (webhook)
+   * Custom API (with templating)
+6. **Logs and Debug UI**
+
+   * Live log viewer
+   * Payload preview per target
+7. **Advanced Syncing**
+
+   * Background task scheduler
+   * Error handling and retry logic
+
+# Risks and Mitigations
+
+### Risk 1: Background sync limitations on iOS
+
+* **Mitigation:** Provide clear auto-sync limitations and fallback to manual triggering
+
+### Risk 2: OAuth complexity for Sheets
+
+* **Mitigation:** Use App Script webhook method in MVP; defer full OAuth to Phase 2
+
+### Risk 3: HealthKit access complexity
+
+* **Mitigation:** Use unified abstraction and normalization on all metric types
+
+### Risk 4: Scope creep in sync logic
+
+* **Mitigation:** Enforce templating structure and one sync mode per backend in MVP
+
+# Appendix
+
+### Research Findings
+
+* HealthKit allows up to 100+ types, but not all are populated on all devices
+* Google Sheets API has strict rate limits; recommend batching
+* Zapier is best for low-volume automation and event hooks
+
+### Technical Specs
+
+* Health data access uses `HKSampleQuery`
+* Networking uses `URLSession` and async/await
+* Persistence through `UserDefaults`, `Keychain`, and `FileManager`
+
+</PRD>
