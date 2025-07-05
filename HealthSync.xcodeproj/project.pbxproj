@@ -6,20 +6,56 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		68C63FEC2E19434700AE5F71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68C63FC62E192C0900AE5F71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68C63FCD2E192C0900AE5F71;
+			remoteInfo = HealthSync;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		68C63FCE2E192C0900AE5F71 /* HealthSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C63FE82E19434700AE5F71 /* HealthSyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthSyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		68C63FF92E194A9F00AE5F71 /* Exceptions for "HealthSync" folder in "HealthSync" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 68C63FCD2E192C0900AE5F71 /* HealthSync */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		68C63FD02E192C0900AE5F71 /* HealthSync */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				68C63FF92E194A9F00AE5F71 /* Exceptions for "HealthSync" folder in "HealthSync" target */,
+			);
 			path = HealthSync;
+			sourceTree = "<group>";
+		};
+		68C63FE92E19434700AE5F71 /* HealthSyncTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HealthSyncTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		68C63FCB2E192C0900AE5F71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C63FE52E19434700AE5F71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				68C63FD02E192C0900AE5F71 /* HealthSync */,
+				68C63FE92E19434700AE5F71 /* HealthSyncTests */,
 				68C63FCF2E192C0900AE5F71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				68C63FCE2E192C0900AE5F71 /* HealthSync.app */,
+				68C63FE82E19434700AE5F71 /* HealthSyncTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +108,29 @@
 			productReference = 68C63FCE2E192C0900AE5F71 /* HealthSync.app */;
 			productType = "com.apple.product-type.application";
 		};
+		68C63FE72E19434700AE5F71 /* HealthSyncTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68C63FEE2E19434700AE5F71 /* Build configuration list for PBXNativeTarget "HealthSyncTests" */;
+			buildPhases = (
+				68C63FE42E19434700AE5F71 /* Sources */,
+				68C63FE52E19434700AE5F71 /* Frameworks */,
+				68C63FE62E19434700AE5F71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68C63FED2E19434700AE5F71 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				68C63FE92E19434700AE5F71 /* HealthSyncTests */,
+			);
+			name = HealthSyncTests;
+			packageProductDependencies = (
+			);
+			productName = HealthSyncTests;
+			productReference = 68C63FE82E19434700AE5F71 /* HealthSyncTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +143,10 @@
 				TargetAttributes = {
 					68C63FCD2E192C0900AE5F71 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					68C63FE72E19434700AE5F71 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 68C63FCD2E192C0900AE5F71;
 					};
 				};
 			};
@@ -100,12 +165,20 @@
 			projectRoot = "";
 			targets = (
 				68C63FCD2E192C0900AE5F71 /* HealthSync */,
+				68C63FE72E19434700AE5F71 /* HealthSyncTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		68C63FCC2E192C0900AE5F71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C63FE62E19434700AE5F71 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +195,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68C63FE42E19434700AE5F71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68C63FED2E19434700AE5F71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68C63FCD2E192C0900AE5F71 /* HealthSync */;
+			targetProxy = 68C63FEC2E19434700AE5F71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		68C63FD72E192C0A00AE5F71 /* Debug */ = {
@@ -255,7 +343,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7JNBF6328G;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = HealthSync/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -283,7 +372,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7JNBF6328G;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = HealthSync/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +389,42 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		68C63FEF2E19434700AE5F71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7JNBF6328G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansonwen.HealthSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthSync.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthSync";
+			};
+			name = Debug;
+		};
+		68C63FF02E19434700AE5F71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7JNBF6328G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hansonwen.HealthSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthSync.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthSync";
 			};
 			name = Release;
 		};
@@ -319,6 +445,15 @@
 			buildConfigurations = (
 				68C63FDA2E192C0A00AE5F71 /* Debug */,
 				68C63FDB2E192C0A00AE5F71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68C63FEE2E19434700AE5F71 /* Build configuration list for PBXNativeTarget "HealthSyncTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68C63FEF2E19434700AE5F71 /* Debug */,
+				68C63FF02E19434700AE5F71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

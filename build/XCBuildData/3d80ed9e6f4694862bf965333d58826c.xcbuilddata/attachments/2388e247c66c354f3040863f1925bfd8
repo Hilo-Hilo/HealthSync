@@ -1,0 +1,68 @@
+{
+  "" : {
+    "diagnostics" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSync-master.dia",
+    "emit-module-dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSync-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSync-master-emit-module.dia",
+    "swift-dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSync-master.swiftdeps"
+  },
+  "/Users/hansonwen/random code/HealthSync/HealthSync/ContentView.swift" : {
+    "const-values" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/hansonwen/random code/HealthSync/HealthSync/HealthKitManager.swift" : {
+    "const-values" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthKitManager.swiftconstvalues",
+    "dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthKitManager.d",
+    "diagnostics" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthKitManager.dia",
+    "index-unit-output-path" : "/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthKitManager.o",
+    "llvm-bc" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthKitManager.bc",
+    "object" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthKitManager.o",
+    "swift-dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthKitManager.swiftdeps",
+    "swiftmodule" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthKitManager~partial.swiftmodule"
+  },
+  "/Users/hansonwen/random code/HealthSync/HealthSync/HealthMetric.swift" : {
+    "const-values" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthMetric.swiftconstvalues",
+    "dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthMetric.d",
+    "diagnostics" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthMetric.dia",
+    "index-unit-output-path" : "/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthMetric.o",
+    "llvm-bc" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthMetric.bc",
+    "object" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthMetric.o",
+    "swift-dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthMetric.swiftdeps",
+    "swiftmodule" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthMetric~partial.swiftmodule"
+  },
+  "/Users/hansonwen/random code/HealthSync/HealthSync/HealthSyncApp.swift" : {
+    "const-values" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSyncApp.swiftconstvalues",
+    "dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSyncApp.d",
+    "diagnostics" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSyncApp.dia",
+    "index-unit-output-path" : "/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSyncApp.o",
+    "llvm-bc" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSyncApp.bc",
+    "object" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSyncApp.o",
+    "swift-dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSyncApp.swiftdeps",
+    "swiftmodule" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/HealthSyncApp~partial.swiftmodule"
+  },
+  "/Users/hansonwen/random code/HealthSync/HealthSync/MetricNormalizer.swift" : {
+    "const-values" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/MetricNormalizer.swiftconstvalues",
+    "dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/MetricNormalizer.d",
+    "diagnostics" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/MetricNormalizer.dia",
+    "index-unit-output-path" : "/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/MetricNormalizer.o",
+    "llvm-bc" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/MetricNormalizer.bc",
+    "object" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/MetricNormalizer.o",
+    "swift-dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/MetricNormalizer.swiftdeps",
+    "swiftmodule" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/MetricNormalizer~partial.swiftmodule"
+  },
+  "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/hansonwen/random code/HealthSync/build/HealthSync.build/Debug-iphoneos/HealthSync.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}
