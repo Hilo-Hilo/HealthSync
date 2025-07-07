@@ -114,4 +114,24 @@ Authorization   Query Data      Standardize      Unified Model
 **Next Milestone**: Tasks 5-6 (Sync Implementation)  
 **Available Components**: HealthKitManager, HealthMetric, MetricNormalizer, MetricCategory, ConfigService, Complete UI Framework
 
+## Implementation Notes for Tasks 5-6
+
+### Sync Target Integration Points
+- **ConfigService.userSettings.syncDestinations**: Ready for actual API configurations
+- **SyncDestination.configuration**: Dictionary for API keys, endpoints, auth tokens
+- **ConfigService.getEnabledDestinations()**: Filtered list of active sync targets
+
+### Architecture Extensions Needed
+- **SyncEngine**: Background processing with configurable intervals
+- **API Clients**: Individual classes for Supabase, Google Sheets, Custom APIs
+- **Error Handling**: Network retry logic and user feedback
+- **Authentication**: OAuth flows for external services
+
+### Data Flow for Sync Implementation
+1. ConfigService provides enabled destinations and selected metrics
+2. HealthKitManager fetches current data for selected metrics
+3. MetricNormalizer converts to HealthMetric objects
+4. SyncEngine processes and sends to configured destinations
+5. Results logged and user notified
+
 **Last Updated**: 2025-07-06
