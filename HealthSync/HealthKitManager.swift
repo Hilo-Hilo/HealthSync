@@ -26,7 +26,11 @@ class HealthKitManager: @unchecked Sendable {
     static let shared = HealthKitManager()
     
     private let healthStore = HKHealthStore()
-    private var isAuthorized = false
+    private var _isAuthorized = false
+    
+    var isAuthorized: Bool {
+        return _isAuthorized
+    }
     
     private init() {}
     
@@ -46,7 +50,7 @@ class HealthKitManager: @unchecked Sendable {
                 }
                 
                 Task { @MainActor in
-                    self.isAuthorized = success
+                    self._isAuthorized = success
                 }
                 continuation.resume(returning: success)
             }
@@ -54,7 +58,7 @@ class HealthKitManager: @unchecked Sendable {
     }
     
     func fetchAvailableDataTypes() -> [HKQuantityTypeIdentifier] {
-        guard isAuthorized else { return [] }
+        guard _isAuthorized else { return [] }
         
         return HKQuantityTypeIdentifier.allCases.filter { identifier in
             guard let quantityType = HKQuantityType.quantityType(forIdentifier: identifier) else {
