@@ -31,10 +31,18 @@ struct MetricsSelectionView: View {
                         ProgressView("Loading health metrics...")
                             .padding()
                     } else {
-                        MetricCategoryListView(
-                            availableMetrics: availableMetrics,
-                            selectedMetrics: $selectedMetrics
-                        )
+                        VStack(spacing: 0) {
+                            // Sync Status Section
+                            SyncStatusView()
+                                .padding()
+                                .background(Color(UIColor.secondarySystemBackground))
+                            
+                            // Metrics Selection
+                            MetricCategoryListView(
+                                availableMetrics: availableMetrics,
+                                selectedMetrics: $selectedMetrics
+                            )
+                        }
                     }
                 }
                 
@@ -45,6 +53,15 @@ struct MetricsSelectionView: View {
                 }
             }
             .navigationTitle("Health Metrics")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    SyncButton {
+                        Task {
+                            await SyncEngine.shared.sync()
+                        }
+                    }
+                }
+            }
             .onAppear {
                 checkAuthorizationStatus()
                 loadSavedMetrics()

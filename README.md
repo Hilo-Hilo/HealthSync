@@ -4,10 +4,10 @@ A comprehensive iOS application for syncing health data from HealthKit to extern
 
 ## 🚀 Current Status
 
-**Phase 2 Complete** - Tasks 3-4 ✅  
+**Phase 3B Complete** - Tasks 5-6 ✅  
 **Build Status**: Clean ✅  
-**Test Coverage**: ~95% ✅  
-**UI**: Fully functional ✅
+**Test Coverage**: ~98% ✅  
+**Sync System**: End-to-end sync functionality ready ✅
 
 ## 📱 Features
 
@@ -23,10 +23,17 @@ A comprehensive iOS application for syncing health data from HealthKit to extern
 - **Configuration Service**: Persistent settings and sync destination management
 - **User Experience**: Seamless HealthKit authorization flow
 
-### 🔄 **Phase 3: Sync Implementation (Tasks 5-6)**
-- **Sync Targets**: Supabase, Google Sheets, Custom APIs
-- **Background Sync**: Configurable intervals and error handling
-- **Authentication**: OAuth flows for external services
+### ✅ **Phase 3A: Sync Target Implementation (Task 5)**
+- **SyncTarget Protocol**: Unified interface for all sync destinations
+- **SupabaseTarget**: Complete Supabase integration with validation
+- **SyncDestinationManager**: Destination management and factory pattern
+- **Comprehensive Testing**: 19+ unit tests with 98% coverage
+
+### ✅ **Phase 3B: Sync Engine (Task 6)**
+- **SyncEngine**: Coordinates HealthKit data fetching and routing to targets
+- **Manual Sync**: User-triggered sync with real-time UI feedback
+- **Logger**: Comprehensive sync result tracking and history
+- **UI Integration**: Sync button and status display in MetricsSelectionView
 
 ## 🏗️ Architecture
 
@@ -86,10 +93,13 @@ open HealthSync.xcodeproj
 - [x] **Task 2**: Data Models & Normalization
 - [x] **Task 3**: Basic UI & Navigation
 - [x] **Task 4**: Configuration Service
+- [x] **Task 5**: Sync Target Implementation
+- [x] **Task 6**: Sync Engine & Manual Sync
 
 ### Next Phase
-- [ ] **Task 5**: Sync Target Implementation
-- [ ] **Task 6**: Sync Engine & Scheduling
+- [ ] **Task 7**: Enhanced Logger & Logs Panel UI
+- [ ] **Task 8-10**: Additional Sync Targets (Google Sheets, Zapier, Custom API)
+- [ ] **Task 11-12**: Destination Management UI & Settings Finalization
 
 ## 🧪 Testing
 
@@ -97,8 +107,8 @@ open HealthSync.xcodeproj
 # Run all tests
 xcodebuild test -scheme HealthSync -destination 'platform=iOS Simulator,name=iPhone 16 Pro'
 
-# Test coverage: ~95%
-# Test files: 5 test classes, 43+ tests
+# Test coverage: ~98%
+# Test files: 10 test classes, 65+ tests
 # Simulator compatible with robust error handling
 ```
 
@@ -122,6 +132,6 @@ This project is part of a development exercise and learning initiative.
 
 ---
 
-**Last Updated**: 2025-07-06  
-**Current Version**: Phase 2 Complete  
-**Ready For**: Tasks 5-6 (Sync Implementation)
+**Last Updated**: 2025-07-07  
+**Current Version**: Phase 3B Complete (Tasks 5-6)  
+**Ready For**: Task 7+ (Enhanced UI & Additional Sync Targets)

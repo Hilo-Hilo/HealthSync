@@ -11,11 +11,11 @@ import HealthKit
 struct SyncDestination: Codable, Identifiable {
     let id: UUID
     let name: String
-    let type: DestinationType
+    let type: SyncDestinationType
     let isEnabled: Bool
     let configuration: [String: String]
     
-    init(name: String, type: DestinationType, isEnabled: Bool, configuration: [String: String]) {
+    init(name: String, type: SyncDestinationType, isEnabled: Bool, configuration: [String: String]) {
         self.id = UUID()
         self.name = name
         self.type = type
@@ -23,26 +23,12 @@ struct SyncDestination: Codable, Identifiable {
         self.configuration = configuration
     }
     
-    enum DestinationType: String, Codable, CaseIterable {
-        case supabase = "supabase"
-        case googleSheets = "google_sheets"
-        case customAPI = "custom_api"
-        
-        var displayName: String {
-            switch self {
-            case .supabase: return "Supabase"
-            case .googleSheets: return "Google Sheets"
-            case .customAPI: return "Custom API"
-            }
-        }
-        
-        var iconName: String {
-            switch self {
-            case .supabase: return "externaldrive.fill"
-            case .googleSheets: return "doc.fill"
-            case .customAPI: return "cloud.fill"
-            }
-        }
+    init(id: UUID = UUID(), name: String, type: SyncDestinationType, isEnabled: Bool, configuration: [String: String]) {
+        self.id = id
+        self.name = name
+        self.type = type
+        self.isEnabled = isEnabled
+        self.configuration = configuration
     }
 }
 

@@ -84,7 +84,7 @@ struct SyncDestinationConfigView: View {
     var body: some View {
         Form {
             Section("Available Destinations") {
-                ForEach(SyncDestination.DestinationType.allCases, id: \.self) { type in
+                ForEach(SyncDestinationType.allCases, id: \.self) { type in
                     HStack {
                         Image(systemName: type.iconName)
                         Text(type.displayName)
